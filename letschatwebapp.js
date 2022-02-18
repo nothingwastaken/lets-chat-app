@@ -25,6 +25,11 @@ function getData() { firebase.database().ref("/").on('value', function (snapshot
 
 getData();
 
+function redirectToRoomName(){
+    localStorage.setItem('room name', Room_names)
+    window.location = "letschatwebapp_page.html"
+}
+
 function logout(){
     localStorage.removeItem("user_name");
     localStorage.removeItem("room_name");
